@@ -16,14 +16,15 @@
   </div> 
 <script src="https://staging-web-chat.nativechat.com/2.25.0/sdk/nativechat.js"></script>
     <link href="https://staging-web-chat.nativechat.com/2.25.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
+    <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
     <script>
- var chatSettings = {
+  var chatSettings = {
     bot: {
-      id: "5f9aa2301ed741f3a9f6166c"
+      id: "b68cb0e80fde4a45b5efbf2c"
     },
     channel: {
-      id: "d967ce0c-608e-43ff-a077-33bda52d6b1d",
-      token: "55e57a87-4f70-4533-a941-feb8a90ec63e"
+      id: "9a48c7bc-e476-41a6-a90a-d561196bd0ed",
+      token: "63903ad1-7eaf-437e-ba9e-e3d9965e76be"
     },
     googleApiKey: "your-google-maps-API-key",
     session: {
@@ -32,15 +33,18 @@
     chatServerInstance: "staging-"
   };
 
-
-  window.NativeChat.load({
-    id: "kcChatWindow",
-    origin: "",
-    display: {
-        mode: "modal"
-    },
-    chat: chatSettings
-  });
+  const load = () => {
+      window.NativeChat.load({
+      id: "kcChatWindow",
+      origin: "",
+      display: {
+        mode: "inline",
+        containerId: "ID-of-the-element-that-contains-the-chat-widget"
+      },
+      chat: chatSettings
+    });
+  };
+  window.onload = load;
 </script>
         
 </body>
