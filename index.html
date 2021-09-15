@@ -12,41 +12,42 @@
 </head>
 <body>
   <div class="city">  
-    <h1>Sept 14 mobile3 v2.26.0</h1>
+    <h1>Sept 15 - sitefinity  v2.25.0</h1>
   </div> 
-<script src="https://staging-web-chat.nativechat.com/2.26.0/sdk/nativechat.js"></script>
-    <link href="https://staging-web-chat.nativechat.com/2.26.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
-    <div id="ID-of-the-element-that-contains-the-chat-widget"></div>
+  
+  <script src="https://web-chat.nativechat.com/2.25.0/sdk/nativechat.js"></script>
+    <link href="https://web-chat.nativechat.com/2.25.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
     <script>
   var chatSettings = {
     bot: {
-      id: "b68cb0e80fde4a45b5efbf2c"
+      id: "e0d0e4c5b2bc42bb894eb69f"
     },
     channel: {
-      id: "9a48c7bc-e476-41a6-a90a-d561196bd0ed",
-      token: "63903ad1-7eaf-437e-ba9e-e3d9965e76be",
-      isMobile: true
+      id: "b7f30dfb-2fa5-438d-94cb-8d66ff6d7789",
+      token: "674ab781-27a1-4a44-bd87-ea3024206347"
     },
-    googleApiKey: "your-google-maps-API-key",
+    googleApiKey: "your-google-maps-API-key", //TODO
     session: {
-      clear: true
+      clear: true,
+      session: {
+         mData: {
+            elqCustomerGUID: undefined, // TODO
+            FormURL: undefined // TODO 
+         }
+      }
+    }
+  };
+ 
+  window.NativeChat.load({
+    id: "ncSitefinityChatWindow",
+    origin: "",
+    display: {
+        mode: "modal"
     },
-    chatServerInstance: "staging-"
-  };
-
-  const load = () => {
-      window.NativeChat.load({
-      id: "kcChatWindow",
-      origin: "",
-      display: {
-        mode: "inline",
-        containerId: "ID-of-the-element-that-contains-the-chat-widget"
-      },
-      chat: chatSettings
-    });
-  };
-  window.onload = load;
+    chat: chatSettings
+  });
 </script>
+
         
 </body>
 </html>
