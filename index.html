@@ -15,27 +15,23 @@
     <h1>Sept 15 - sitefinity  v2.25.0</h1>
   </div> 
   
-  <script src="https://web-chat.nativechat.com/2.25.0/sdk/nativechat.js"></script>
-    <link href="https://web-chat.nativechat.com/2.25.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
-    <script>
+  <script src="https://staging-web-chat.nativechat.com/pr48-2.27.0/sdk/nativechat.js"></script>
+  <link href="https://staging-web-chat.nativechat.com/pr48-2.27.0/sdk/nativechat.css" rel="stylesheet" type="text/css">
+  
+  
   var chatSettings = {
     bot: {
-      id: "e0d0e4c5b2bc42bb894eb69f"
+      id: "f13d85ed4f1443308f3ac4cf"
     },
     channel: {
-      id: "b7f30dfb-2fa5-438d-94cb-8d66ff6d7789",
-      token: "674ab781-27a1-4a44-bd87-ea3024206347"
+      id: "bac3087a-a268-463b-8ef6-e61c31734a5a",
+      token: "73f0152e-28c4-4a2c-bd07-cbfa328a29cc"
     },
-    googleApiKey: "your-google-maps-API-key", //TODO
+    googleApiKey: "your-google-maps-API-key",
     session: {
-      clear: true,
-      session: {
-         mData: {
-            elqCustomerGUID: undefined, // TODO
-            FormURL: undefined // TODO 
-         }
-      }
-    }
+      clear: true
+    },
+    chatServerInstance: "staging-"
   };
  
   window.NativeChat.load({
